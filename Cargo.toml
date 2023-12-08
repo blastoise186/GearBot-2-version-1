@@ -17,7 +17,7 @@ flexi_logger = { version = "0.17", default-features = false, features = ["colors
 fluent-bundle = "0.15"
 futures-util = { version = "0.3", default-features = false }
 git-version = "0.3"
-hyper = { version = "0.14", default-features = false, features = ["server"] }
+hyper = { version = "1.0", default-features = false, features = ["server"] }
 intl-memoizer = "0.5"
 lazy_static = "1.4"
 log = "0.4"
