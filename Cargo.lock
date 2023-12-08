@@ -726,7 +726,7 @@ dependencies = [
  "fluent-bundle",
  "futures-util",
  "git-version",
- "hyper",
+ "hyper 1.0.1",
  "intl-memoizer",
  "lazy_static",
  "log",
@@ -822,16 +822,16 @@ checksum = "9b919933a397b79c37e33b77bb2aa3dc8eb6e165ad809e58ff75bc7db2e34574"
 
 [[package]]
 name = "h2"
-version = "0.3.2"
+version = "0.3.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fc018e188373e2777d0ef2467ebff62a08e66c3f5857b23c8fbec3018210dc00"
+checksum = "91fc23aa11be92976ef4729127f1a74adf36d8436f7816b185d18df956790833"
 dependencies = [
  "bytes 1.0.1",
  "fnv",
  "futures-core",
  "futures-sink",
  "futures-util",
- "http",
+ "http 0.2.4",
  "indexmap",
  "slab",
  "tokio",
@@ -919,7 +919,18 @@ checksum = "527e8c9ac747e28542699a951517aa9a6945af506cd1f2e1b53a576c17b6cc11"
 dependencies = [
  "bytes 1.0.1",
  "fnv",
- "itoa",
+ "itoa 0.4.7",
+]
+
+[[package]]
+name = "http"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b32afd38673a8016f7c9ae69e5af41a58f81b1d31689040f2f1959594ce194ea"
+dependencies = [
+ "bytes 1.0.1",
+ "fnv",
+ "itoa 1.0.9",
 ]
 
 [[package]]
@@ -929,8 +940,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5dfb77c123b4e2f72a2069aeae0b4b4949cc7e966df277813fc16347e7549737"
 dependencies = [
  "bytes 1.0.1",
- "http",
+ "http 0.2.4",
  "pin-project-lite",
+]
+
+[[package]]
+name = "http-body"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1cac85db508abc24a2e48553ba12a996e87244a0395ce011e62b37158745d643"
+dependencies = [
+ "bytes 1.0.1",
+ "http 1.0.0",
 ]
 
 [[package]]
@@ -941,32 +962,48 @@ checksum = "4a1ce40d6fc9764887c2fdc7305c3dcc429ba11ff981c1509416afd5697e4437"
 
 [[package]]
 name = "httpdate"
-version = "0.3.2"
+version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "494b4d60369511e7dea41cf646832512a94e542f68bb9c49e54518e0f468eb47"
+checksum = "df3b46402a9d5adb4c86a0cf463f42e19994e3ee891101b1841f30a545cb49a9"
 
 [[package]]
 name = "hyper"
-version = "0.14.5"
+version = "0.14.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8bf09f61b52cfcf4c00de50df88ae423d6c02354e385a86341133b5338630ad1"
+checksum = "0b61cf2d1aebcf6e6352c97b81dc2244ca29194be1b276f5d8ad5c6330fffb11"
 dependencies = [
  "bytes 1.0.1",
  "futures-channel",
  "futures-core",
  "futures-util",
  "h2",
- "http",
- "http-body",
+ "http 0.2.4",
+ "http-body 0.4.1",
  "httparse",
  "httpdate",
- "itoa",
- "pin-project",
+ "itoa 0.4.7",
+ "pin-project-lite",
  "socket2",
  "tokio",
  "tower-service",
  "tracing",
  "want",
+]
+
+[[package]]
+name = "hyper"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "403f9214f3e703236b221f1a9cd88ec8b4adfa5296de01ab96216361f4692f56"
+dependencies = [
+ "bytes 1.0.1",
+ "futures-channel",
+ "futures-util",
+ "http 1.0.0",
+ "http-body 1.0.0",
+ "httpdate",
+ "pin-project-lite",
+ "tokio",
 ]
 
 [[package]]
@@ -977,7 +1014,7 @@ checksum = "5f9f7a97316d44c0af9b0301e65010573a853a9fc97046d7331d7f6bc0fd5a64"
 dependencies = [
  "ct-logs",
  "futures-util",
- "hyper",
+ "hyper 0.14.11",
  "log",
  "rustls",
  "rustls-native-certs",
@@ -1079,6 +1116,12 @@ name = "itoa"
 version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd25036021b0de88a0aff6b850051563c6516d0bf53f8638938edbb9de732736"
+
+[[package]]
+name = "itoa"
+version = "1.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "af150ab688ff2122fcef229be89cb50dd66af9e01a4ff320cc137eecc9bacc38"
 
 [[package]]
 name = "js-sys"
@@ -1866,7 +1909,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "799e97dc9fdae36a5c8b8f2cae9ce2ee9fdce2058c57a93e6099d919fd982f79"
 dependencies = [
  "indexmap",
- "itoa",
+ "itoa 0.4.7",
  "ryu",
  "serde",
 ]
@@ -1995,7 +2038,7 @@ dependencies = [
  "hashlink",
  "hex",
  "hmac",
- "itoa",
+ "itoa 0.4.7",
  "libc",
  "log",
  "md-5",
@@ -2199,16 +2242,16 @@ dependencies = [
 
 [[package]]
 name = "tokio-util"
-version = "0.6.6"
+version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "940a12c99365c31ea8dd9ba04ec1be183ffe4920102bb7122c2f515437601e8e"
+checksum = "f988a1a1adc2fb21f9c12aa96441da33a1728193ae0b95d2be22dbd17fcb4e5c"
 dependencies = [
  "bytes 1.0.1",
  "futures-core",
  "futures-sink",
- "log",
  "pin-project-lite",
  "tokio",
+ "tracing",
 ]
 
 [[package]]
@@ -2273,7 +2316,7 @@ dependencies = [
  "base64 0.12.3",
  "byteorder",
  "bytes 0.5.6",
- "http",
+ "http 0.2.4",
  "httparse",
  "input_buffer",
  "log",
@@ -2339,7 +2382,7 @@ dependencies = [
  "bytes 1.0.1",
  "futures-channel",
  "futures-util",
- "hyper",
+ "hyper 0.14.11",
  "hyper-rustls",
  "percent-encoding",
  "rand 0.8.3",
@@ -2520,7 +2563,7 @@ checksum = "4fd13485b764afe742226ad5a4906e9f7c1ae0029895473fa52855882661e06c"
 dependencies = [
  "float-cmp",
  "halfbrown",
- "itoa",
+ "itoa 0.4.7",
  "ryu",
 ]
 
