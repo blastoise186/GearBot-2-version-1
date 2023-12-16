@@ -9,7 +9,7 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 aes-gcm = "0.9"
-bitflags = "1.2"
+bitflags = "2.4"
 chrono = "0.4"
 ctrlc = { version = "3", features = ["termination"] }
 darkredis = "0.8"
