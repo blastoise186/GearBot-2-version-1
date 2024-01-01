@@ -33,7 +33,7 @@ tokio = { version = "1.16", default-features = false, features = ["macros", "syn
 toml = "0.8"
 twilight-embed-builder = "0.11"
 twilight-gateway = { version="0.4", default-features=false, features = ["rustls", "simd-json", "simd-zlib"] }
-twilight-http = "0.3"
+twilight-http = "0.4"
 twilight-model = "0.15"
 twilight-util = { version = "0.15", default-features = false, features = ["link"] }
 url = "2.2"
