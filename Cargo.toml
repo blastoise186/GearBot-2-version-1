@@ -36,7 +36,7 @@ twilight-gateway = { version="0.4", default-features=false, features = ["rustls"
 twilight-http = "0.4"
 twilight-model = "0.15"
 twilight-util = { version = "0.15", default-features = false, features = ["link"] }
-url = "2.2"
+url = "2.3"
 unic-langid = { version = "0.9", features = ["macros", "serde"] }
 uuid = { version = "1.6", features = ["serde", "v4"], default-features = false }
 
